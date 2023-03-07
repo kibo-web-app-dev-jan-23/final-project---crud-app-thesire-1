@@ -10,4 +10,4 @@ Flask-WTF
 SQLAlchemy
 SQLAlchemy-serializer
 Werkzeug
-WTForms
+gunicorn
