@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ assignment.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>{{ assignment.title }}</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('assignment_tracker.index') }}">Assignments</a></li>
+          <li><a href="{{ url_for('assignment_tracker.edit', id=assignment.id) }}">Edit Assignment</a></li>
+          <li><a href="{{ url_for('assignment_tracker.delete', id=assignment.id) }}">Delete Assignment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <p><strong>Description:</strong> {{ assignment.description }}</p>
+      <p><strong>Due Date:</strong> {{ assignment.due_date }}</p>
+      <p><strong>Status:</strong> {{ assignment.category }}</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Assignment Tracker</p>
+    </footer>
+  </body>
+</html>

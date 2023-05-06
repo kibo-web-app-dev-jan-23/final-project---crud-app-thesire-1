@@ -1,0 +1,13 @@
+python-dotenv
+Flask
+Flask-Login
+flask-marshmallow
+Flask-Migrate
+flask-serialize
+Flask-SQLAlchemy
+Flask-Toastr
+Flask-WTF
+SQLAlchemy
+SQLAlchemy-serializer
+Werkzeug
+gunicorn

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Assignment Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Assignment Tracker</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('assignment_tracker.index') }}">Assignments</a></li>
+          <li><a href="{{ url_for('assignment_tracker.create') }}">Create Assignment</a></li>
+          <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>All Assignments</h2>
+      <ul>
+        {% for assignment in assignments %}
+          <li><a href="{{ url_for('assignment_tracker.show', id=assignment.id) }}">{{ assignment.title }}</a></li>
+        {% else %}
+          <li>No assignments yet!</li>
+        {% endfor %}
+      </ul>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Assignment Tracker</p>
+    </footer>
+  </body>
+</html>

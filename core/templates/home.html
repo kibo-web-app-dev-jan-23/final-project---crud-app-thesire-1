@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Assignment Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Assignment Tracker</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('assignment_tracker.index') }}">Assignments</a></li>
+          <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+          <li><a href="{{ url_for('auth.signup') }}">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <h2>Welcome to the Assignment Tracker!</h2>
+      <p>This is a web application that allows you to keep track of your assignments and deadlines.</p>
+      <p>Use the navigation bar above to get started.</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Assignment Tracker</p>
+    </footer>
+  </body>
+</html>
+
+
+
+
+

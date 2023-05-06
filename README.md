@@ -1,44 +1,22 @@
-# Multi-model CRUD App
+## Assignment Tracker CRUD App
 
-Design and build a web application using Flask or Express.
+This web application is designed to help students keep track of their assignment deadlines. It allows them to input their assignments, including their due dates and any other relevant details. The app is intended to help students stay organized and on top of their workload, ensuring that they don't miss any important deadlines. Overall, this app serves as a useful tool for students to manage their assignments and stay on track with their academic responsibilities.
 
-## Requirements
+### Data Model
 
-Your application
+The database used in this project is sqlite and it contains three tables which are all connected. They include:
+* Assignments - This can be found in core/models.py
+* Category - This can be found in the tracker/models.py 
+* User - This can be found in the auth/models.py
 
-- must use Flask or Express
-- must use a relational database (Postgresql is recommended, if you would like to deploy your application. SQLite3 is also fine!)
-- must have multiple, related database models
-- must have features to Create, Read, Update, and Delete some of those models from a web interface
-- must be designed such that it works properly on different devices (desktop and mobile)
 
-You must also include a README.md file that
-- explains what your app does
-- explains the tables in your schema
-- explains how to set the app up and run it locally
+To run this app locally, follow the steps below:
+```
+flask --app base.py db init
+flask --app base.py db migrate -m "Done"
+flask --app base.py db upgrade
+python cat.py
+flask --app base.py run
+```
 
-## Optional components
-
-The following are optional, but not required:
-
-- you may use an ORM library
-- you may use a CSS framework
-- you may use an API
-- you may have users and authentication
-- you may use  a library to manage authentication and authorization
-- you may deploy your application to the web
-
-## Recommendations
-
-The possibilities for your application are wide and varied. Choosing a scope for your project that you can complete within the time is key.
-
-Before you start coding, you should:
-- write out a list of pages in your planned application
-- write the routes associated with those pages and their actions
-- write out the plan for the models in your schema
-
-You are also highly encouraged to build a scoped-down **Minimum Viable Product** (MVP) first, then add more features after you have it working.
-
-## Notes
-
-- If you choose to start from a Flask or Express starter code template (like [flask-starter](https://github.com/ksh7/flask-starter) or [express-postgres-boilerplate](https://github.com/mateo-io/express-postgres-boilerplate)) you **must** mention it in your README file.
+Deployed App: https://assignment-tracker-pccx.onrender.com
